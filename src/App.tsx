@@ -1,26 +1,30 @@
-import React from 'react';
-// import CounterComponent from './CounterComponent';
-// import FetchStoreRedux from './FetchStoreRedux';
-// import Container from './Container';
-// import Container1 from './Container1';
-import UserQuizForm from './UserQuizForm';
-import UserQuizForm1 from './UserQuizForm1';
-import FilterableProductTable from './FilterableProductTable';
-//import FilterableProductTable1 from './FilterableProductTable1';
+import React from "react";
+// import CounterComponent from './Components/CounterComponent';
+// import SearchingTheProduct from "./Components/SearchingTheProduct";
+// import Container from "./Components/ButtonClicks/Container";
+// import Container1 from "./Components/ButtonClicks/Container1";
+// import Container2 from "./Components/ButtonClicks/Container2";
+// import UserQuizForm from "./Components/UserQuizForm";
+import UserQuizForm1 from "./Components/UserQuizForm1";
+// import FilterableProductTable from "./Components/FilterableProductTable";
+// import FilterableProductTable1 from './Components/FilterableProductTable1';
+import TestForm from "./Components/TestForm";
 
-const App: React.FC = ()=> {
+const App: React.FC = () => {
   return (
     <div className="App">
       {/* <CounterComponent/>
-      <FetchStoreRedux/>
-      <Container/>
-      <Container1/> */}
-      <UserQuizForm/>
-      <UserQuizForm1/>
-      <FilterableProductTable/>
-      {/* <FilterableProductTable1/> */}
+      <SearchingTheProduct/>
+      <Container />
+      <Container1 />
+      <Container2 />
+      <UserQuizForm /> */}
+      <UserQuizForm1 />
+      <TestForm/>
+      {/* <FilterableProductTable />
+      <FilterableProductTable1/> */}
     </div>
   );
-}
+};
 
 export default App;

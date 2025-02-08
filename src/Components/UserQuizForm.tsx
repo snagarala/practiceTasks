@@ -1,5 +1,6 @@
 import React from "react";
 
+//only 1 question with multiple options
 export default function UserQuizForm() {
   const [clickedIndex, setClickedIndex] = React.useState<number | null>(null);
   const [clickedSubmit, setClickedSubmit] = React.useState<boolean>(false);
@@ -57,12 +58,13 @@ export default function UserQuizForm() {
             />
           </div>
         ))}
-        <input
+        <button
           type="submit"
-          value="Next"
-          className="rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 ... 
-               px-[20px] py-[5px] text-white font-bold mt-[20px] absolute right-0 mr-[40px] cursor-pointer"
-        />
+          className="rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 
+                     px-[20px] py-[5px] text-white font-bold mt-[20px] absolute right-0 mr-[40px] cursor-pointer"
+        >
+          Submit
+        </button>
       </form>
     </div>
   );

@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { setData } from "./Redux/dataSlice";
+import { setData } from "../Redux/dataSlice";
 
-//Taking staticData giving to redux & from redux we get values using useSelector hook filter & display
-export default function FetchStoreRedux() {
+//Taking staticData giving to redux & from redux we get values using useSelector hook.then filter & display
+export default function SearchingTheProduct() {
   const data = useSelector((state: any) => state.data.items); // Get the current count
   const dispatch = useDispatch();
 
@@ -26,15 +26,6 @@ export default function FetchStoreRedux() {
     dispatch(setData(staticData));
   }, [dispatch]);
 
-  // Fetch data from API and store in redux
-  //   useEffect(() => {
-  //     fetch('https://jsonplaceholder.typicode.com/posts')
-  //       .then((res) => res.json())
-  //       .then((data) => {
-  //         dispatch(setData(data));
-  //       });
-  //   }, [dispatch]);
-
   // Filter the data based on user input
   const filteredData = data.filter((item: any) =>
     item.title.toLowerCase().includes(search.toLowerCase())
@@ -42,7 +33,9 @@ export default function FetchStoreRedux() {
 
   return (
     <div className="ml-[50px] p-[15px] bg-yellow-100 my-[50px] h-[300px] w-[500px] items-center mb-[15px]">
-      <h2 className="font-bold mb-[5px]">Static Data Filter: </h2>
+      <h2 className="font-bold mb-[5px]">
+        Searching the products using Filter:{" "}
+      </h2>
       <input
         type="text"
         placeholder="Filter..."

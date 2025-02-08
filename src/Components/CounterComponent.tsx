@@ -1,8 +1,10 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { increment, decrement, reset } from './Redux/counterSlice.js';
+import { increment, decrement, reset } from '../Redux/counterSlice.js';
 
 export default function CounterComponent() {
+
+  //We Used redux 
   const count = useSelector((state: any) => state.counter.value); // Get the current count
   const dispatch = useDispatch();
 
@@ -14,10 +16,12 @@ export default function CounterComponent() {
     }
 
   return (
-    <div className="ml-[50px] p-[15px] bg-yellow-100 my-[50px] h-[200px] w-[500px] items-center">
-      <h1 className="text-center mt-[5px] bg-red-300 mb-[50px] p-[5px]">
+    <div className="ml-[50px] p-[15px] bg-yellow-100 my-[50px] h-[300px] w-[500px] items-center ">
+      <h1 className="text-center font-bold" >CounterComponent where user can enter
+       the value how much he wanted to increment/decrement.</h1>
+      <h2 className="text-center mt-[5px] bg-red-300 mb-[50px] p-[5px]">
         Counter: {count}
-      </h1>
+      </h2>
       <div className="m-[15px]">
         <label>step value: </label>
         <input

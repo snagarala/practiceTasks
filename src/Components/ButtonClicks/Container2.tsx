@@ -10,7 +10,7 @@ const componentArray = [
   { id: 2, title: "Compo3", Component: Compo3 },
 ];
 
-export default function Container1() {
+export default function Container2() {
   const [clickedComponent, setClickedComponent] = React.useState(0);
 
   //when you clicked on clickedComponent we get a compo1/compo2/compo3 that component i am storing in 'SelectedComponent'

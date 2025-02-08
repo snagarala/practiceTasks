@@ -6,6 +6,7 @@ import Compo3 from "./Compo3";
 export default function Container() {
   const [clickedComponent, setClickedComponent] = React.useState(0);
 
+  //here Component should start with caps
   const componentArray = [
     { id: 1, name: "Compo1", Component: <Compo1 /> },
     { id: 2, name: "Compo2", Component: <Compo2 /> },
@@ -16,6 +17,7 @@ export default function Container() {
 
   return (
     <div className="ml-[50px] p-[15px] bg-yellow-100 my-[50px] h-[200px] w-[500px] mb-[15px]">
+      <h1 className="text-center font-bold pb-[30px]">Container[ButtonClicks]</h1>
       {componentArray.map(({ name }, index: any) => (
         <button
           key={index}
@@ -28,7 +30,6 @@ export default function Container() {
       ))}
 
       <div className="mt-[40px] flex flex-col items-center">
-        <h3 className="font-bold">Selected Component:</h3>
         {selectedComponent ? (
           selectedComponent.Component //Directly render the react element
         ) : (
