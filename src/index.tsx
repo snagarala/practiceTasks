@@ -5,13 +5,20 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { Provider } from "react-redux";
 import store from "./Redux/store";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider, BrowserRouter } from "react-router-dom";
+import WrapperComponent from "./Components/HOC/WrapperComponent1";
 // import Overview from './components/Overview';
 // import Indices from './components/Indices';
 // import Bonds from './components/Bonds';
 // import About from './components/About';
 // import SignInPageIndices from './components/SignInPageIndices';
 //import ParentComponent from './components/ParentComponent';
+import Login from "./Components/HOC/Login";
+import WrapperComponent1 from "./Components/HOC/WrapperComponent1";
+import { AuthProvider } from "./Components/HOC/AuthContext.js";
+import UnAuthorized from "./Components/HOC/UnAuthorized";
+import FoodHomePage from "./Components/FoodDeliveryApp/FoodHomePage";
+import FoodAboutPage from "./Components/FoodDeliveryApp/FoodAboutPage";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -19,8 +26,29 @@ const root = ReactDOM.createRoot(
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element:<AuthProvider><App /></AuthProvider> ,
   },
+  {
+    path: "/dashboard",
+    element: <WrapperComponent1 />,
+  },
+  {
+    path: "/login",
+    element: <Login />,
+  },
+  {
+    path:"/unauthorized",
+    element: <UnAuthorized/>
+  },
+  {
+    path:"/foodHome",
+    element:<FoodHomePage/>
+  },
+  {
+    path:"/foodAbout",
+    element:<FoodAboutPage/>
+  },
+  
   //   {
   //     path: "/",
   //     element:<ParentComponent/>,
@@ -63,6 +91,18 @@ root.render(
     </Provider>
   </React.StrictMode>
 );
+// root.render(
+//   <React.StrictMode>
+//     <Provider store={store}>
+//       <BrowserRouter> {/* ✅ Use only BrowserRouter */}
+//         <AuthProvider>
+//           <App /> {/* ✅ App should handle routes using `react-router-dom` */}
+//         </AuthProvider>
+//       </BrowserRouter>
+//     </Provider>
+//   </React.StrictMode>
+// );
+
 //const router = creatBrowserRouter([
 //   {
 //     path:"/",

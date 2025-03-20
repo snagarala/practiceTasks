@@ -6,8 +6,8 @@ export default function ChildImageTag() {
   return (
     <div className="">
      { image && (
-      <img src="product.png" alt="image" onClick={()=>setImage(false)}
-         className="text-green-600 h-[60px] w-[60px] bg-green-200 rounded cursor-pointer"/>
+      <img src="noodles.png" alt="image" onClick={()=>setImage(false)}
+         className=" h-[220px] w-[300px]  cursor-pointer"/>
      )}
      
     </div>

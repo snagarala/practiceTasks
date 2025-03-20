@@ -6,14 +6,13 @@ export default function CardProvider({ children }) {
   const [image, setImage] = useState(false);
 
   return (
-    <div className="relative h-[300px] w-[400px] p-4 flex flex-col items-center justify-center gap-4 bg-white rounded-md shadow-lg">
+    <div className="relative h-[480px] w-[300px]  flex flex-col items-center gap-4 bg-white shadow-lg">
       <CardContext.Provider value={{ image, setImage }}>
-        {/* <card className=" w-[200px] h-[400px] shadow-md bg-white "> */}
-          <button onClick={()=>setImage(true)} className="py-1 px-2 bg-gray-300 rounded cursor-pointer">
-             Image</button>
-          
+       
           <div>{children}</div>
-        {/* </card> */}
+          <button onClick={()=>setImage(true)} className="py-1 px-2 bg-green-600 text-white cursor-pointer">
+             Details</button>
+        
       </CardContext.Provider>
     </div>
   );

@@ -8,11 +8,12 @@ export default function CardWrapper() {
     <div className="h-[500px] w-full bg-yellow-100 flex justify-center  items-center">
       <div className="flex justify-center">
         <CardProvider>
-        <h1>Hello i am parent Component.</h1> 
-          <p>This is sample image</p>
-          <ChildImageTag />
+        <ChildImageTag />
+          <h1 className="mt-5 pl-4">Hello i am parent Component.</h1>
+          <p className="mt-2 pl-4 font-bold ">Instant Pot Spicy Thai Noodles.</p>
+          
         </CardProvider>
-        </div>
+      </div>
     </div>
   );
 }

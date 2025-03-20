@@ -19,6 +19,8 @@ const initialState = {
   otpError: "",
   currentStep: 0,
 };
+
+//Reducer Functions (update states)
 function reducer(state, action) {
   switch (action.type) {
     case "SET_DETAILS":
@@ -52,6 +54,7 @@ function reducer(state, action) {
   }
 }
 export default function MultiForm() {
+
   const [state, dispatch] = useReducer(reducer, initialState);
 
   function handleSubmit(inputs, e = null) {
@@ -86,7 +89,7 @@ export default function MultiForm() {
         return false;
       }
     }
-    if (
+    if (  //for initialState values we keep "state."
       state.details.name.length &&
       state.details.email.length &&
       state.details.phone.length
@@ -152,7 +155,7 @@ export default function MultiForm() {
         component: (
           <Form
             details={state.details}
-            setDetails={(payload) => {
+            setDetails={(payload) => { //payload-passing an obj{...details,name:e.target.value}
               dispatch({ type: "SET_DETAILS", payload });
             }}
             detailsError={state.detailsError}

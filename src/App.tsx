@@ -26,6 +26,12 @@ import WrapperFile from "./Components/ContextAPI/WrapperFile";
 import DemoForm from "./Components/TypeScript/DemoForm";
 import CardWrapper from "./Components/ContextAPI/CardWrapper";
 import MultiForm from "./Components/MultiStepFormUsingUseReducer/MultiForm";
+import ParentCompo from "./Components/PerformanceOptimization/ParentCompo";
+import AddNameToArray from "./Components/AddNameToArray";
+import InfiniteScroll from "./Components/InfiniteScroll";
+import ToggleComponent from "./Components/ToggleComponent";
+//import FoodHomePage from "./Components/FoodDeliveryApp/FoodHomePage";
+import WrapperComponent1 from "./Components/HOC/WrapperComponent1";
 
 const App: React.FC = () => {
   return (
@@ -44,7 +50,7 @@ const App: React.FC = () => {
       {/* <GoogleSearch/> */}
       {/* <AccordData/>
       <ControlledAccordData/> */}
-      <MultiStepComponent/>
+      {/* <MultiStepComponent/> */}
       {/* <MultiForm/> */}
       {/* <UserEntryForm /> */}
       {/* <ParentForm/> */}
@@ -55,8 +61,14 @@ const App: React.FC = () => {
       {/* <SearchPokemon/> */}
       {/* <Example/> */}
       {/* <WrapperFile/>
-      <DemoForm/>
-      <CardWrapper/> */}
+      <DemoForm/> */}
+      {/* <CardWrapper/> */}
+      {/* <ParentCompo/> */}
+      {/* <AddNameToArray/> */}
+      {/* <InfiniteScroll/> */}
+      {/* <ToggleComponent/> */}
+      {/* <FoodHomePage/> */}
+     <WrapperComponent1/>
     </div>
   );
 };
